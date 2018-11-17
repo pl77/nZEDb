@@ -1962,7 +1962,7 @@ class ProcessAdditional
 		$this->_foundJPGSample = (
 			$this->_releaseImage->saveImage(
 				$this->_release['guid'] . '_thumb',
-				$fileLocation, $this->_releaseImage->jpgSavePath, 650, 650
+				$fileLocation, $this->_releaseImage->jpgSavePath, 1920, 1080
 			) === 1 ? true : false
 		);
 
@@ -2144,7 +2144,7 @@ class ProcessAdditional
 						$fileLocation .
 						'" -ss ' . $lowestLength .
 						' -t ' . $this->_ffMPEGDuration .
-						' -vcodec libtheora -filter:v scale=320:-1 ' .
+						' -vcodec libtheora -filter:v scale=640:-1 ' .
 						' -acodec libvorbis -loglevel quiet -y "' .
 						$fileName .
 						'"'
@@ -2159,7 +2159,7 @@ class ProcessAdditional
 					Settings::value('apps..ffmpegpath') .
 					'" -i "' .
 					$fileLocation .
-					'" -vcodec libtheora -filter:v scale=320:-1 -t ' .
+					'" -vcodec libtheora -filter:v scale=640:-1 -t ' .
 					$this->_ffMPEGDuration .
 					' -acodec libvorbis -loglevel quiet -y "' .
 					$fileName .
