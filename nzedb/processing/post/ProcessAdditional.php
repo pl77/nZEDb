@@ -1620,7 +1620,7 @@ class ProcessAdditional
 				$this->_foundJPGSample = (
 				$this->_releaseImage->saveImage(
 					$this->_release['guid'] . '_thumb', $this->tmpPath . 'samplepicture.jpg',
-					$this->_releaseImage->jpgSavePath, 650, 650
+					$this->_releaseImage->jpgSavePath, 1920, 1080
 				) === 1 ? true : false
 				);
 
@@ -2062,7 +2062,7 @@ class ProcessAdditional
 				$saved = $this->_releaseImage->saveImage(
 					$this->_release['guid'] . '_thumb',
 					$fileName,
-					$this->_releaseImage->imgSavePath, 800, 600
+					$this->_releaseImage->imgSavePath, 1920, 1080
 				);
 
 				// Delete the temp file we created.
